@@ -1,0 +1,94 @@
+site_name: Isaac Sim 日本語ガイド(非公式)
+site_description: NVIDIA Isaac Sim の非公式日本語ガイド。公式ドキュメントの構成に沿って、日本語で概念・使い方を解説します。
+site_url: https://tatsuya-fukuoka.github.io/isaacsim-doc-ja/
+repo_url: https://github.com/tatsuya-fukuoka/isaacsim-doc-ja
+repo_name: tatsuya-fukuoka/isaacsim-doc-ja
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: ja
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-night
+        name: ダークモードに切り替え
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: ライトモードに切り替え
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - ホーム:
+      - index.md
+      - このサイトについて: about.md
+  - はじめに:
+      - 概要と特徴: getting-started/overview.md
+      - 動作要件: getting-started/requirements.md
+      - インストール: getting-started/installation.md
+      - クイックスタート: getting-started/quickstart.md
+  - 基本概念:
+      - USD とステージ: concepts/usd-stage.md
+      - 物理シミュレーション: concepts/physics.md
+      - アセットとコンテンツ: concepts/assets.md
+  - ロボット:
+      - ロボットのインポート (URDF/MJCF): robots/import.md
+      - ロボットのセットアップ: robots/setup.md
+  - センサー:
+      - カメラと RTX センサー: sensors/camera-rtx.md
+      - 物理ベースセンサー: sensors/physics-sensors.md
+  - 開発:
+      - Python スクリプティング: development/python-scripting.md
+      - 拡張機能 (Extensions): development/extensions.md
+      - ROS 2 連携: development/ros2.md
+      - 合成データ生成 (Replicator): development/replicator.md
+      - Isaac Lab と強化学習: development/isaac-lab.md
+  - リファレンス:
+      - 用語集: reference/glossary.md
+      - トラブルシューティング: reference/troubleshooting.md
+      - 公式リンク集: reference/links.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: ja
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/tatsuya-fukuoka/isaacsim-doc-ja
+
+copyright: >
+  本サイトは NVIDIA 社とは無関係の非公式ガイドです。
+  Isaac Sim、Omniverse は NVIDIA Corporation の商標です。
